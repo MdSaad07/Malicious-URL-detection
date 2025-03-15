@@ -1,29 +1,29 @@
-# Malicious URL Detection API
+# 🛡️ Malicious URL Detection API
 
-## Overview
+## 📌 Overview
 This project is a Flask-based API that uses a machine learning model (Random Forest Classifier) to classify URLs as benign, malicious, phishing, defacement, or malware. The model is trained using extracted URL-based features.
 
-## Features
-- Extracts various features from URLs (length, presence of special characters, IP addresses, etc.).
-- Uses a trained Random Forest Classifier to predict URL type.
-- Provides an API endpoint to check URL classification.
-- Returns the accuracy of the model along with the classification result.
+## ✨ Features
+✅ Extracts various features from URLs (length, presence of special characters, IP addresses, etc.).  
+✅ Uses a trained Random Forest Classifier to predict URL type.  
+✅ Provides an API endpoint to check URL classification.  
+✅ Returns the accuracy of the model along with the classification result.  
 
-## Dataset
+## 📂 Dataset
 The dataset used is `malicious_phish.csv`, which contains labeled URL data for training and evaluation.
 
-## Installation
+## 🛠️ Installation
 1. Clone this repository:
    ```sh
-   git clone <repo_url>
-   cd <repo_directory>
+   git clone https://github.com/MdSaad07/Malicious-URL-detection-API.git
+   cd Malicious-URL-detection-API
    ```
 2. Install required dependencies:
    ```sh
    pip install -r requirements.txt
    ```
 
-## Dependencies
+## 📦 Dependencies
 Ensure you have the following Python libraries installed:
 ```sh
 pandas
@@ -38,14 +38,14 @@ You can install them using:
 pip install pandas flask scikit-learn tld
 ```
 
-## Usage
+## 🚀 Usage
 ### Running the API
 ```sh
 python app.py
 ```
 
-### API Endpoints
-#### Predict URL Type
+### 🔗 API Endpoints
+#### 🎯 Predict URL Type
 - **Endpoint:** `/api/predict`
 - **Method:** `POST`
 - **Request Body (JSON):**
@@ -63,11 +63,13 @@ python app.py
   }
   ```
 
-## Model Training & Accuracy
+## 📊 Model Training & Accuracy
 The model is trained using extracted URL-based features. It evaluates prediction accuracy and displays classification performance using `classification_report` and `accuracy_score`.
 
-## License
+## 📜 License
 This project is licensed under the MIT License.
 
-## Author
-Mohammed Saad Fazal
+## 👨‍💻 Author
+Developed with ❤️ by **Mohammed Saad Fazal**  
+🔗 GitHub: [MdSaad07](https://github.com/MdSaad07)  
+
