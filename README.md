@@ -1,9 +1,73 @@
-# Malicious-URL-detection
-Malicious-URL-detection uses Random forest to detect whether the input URL is malicious or not from the following input data set
+# Malicious URL Detection API
 
-Firsty, extract the malicious_phish.csv file from the archive zip.
+## Overview
+This project is a Flask-based API that uses a machine learning model (Random Forest Classifier) to classify URLs as benign, malicious, phishing, defacement, or malware. The model is trained using extracted URL-based features.
 
-To run the the .py file place the malicious_phish.csv file and the .py program in the same directory
+## Features
+- Extracts various features from URLs (length, presence of special characters, IP addresses, etc.).
+- Uses a trained Random Forest Classifier to predict URL type.
+- Provides an API endpoint to check URL classification.
+- Returns the accuracy of the model along with the classification result.
 
-Command to run the python program:
-python malicious_phish.py
+## Dataset
+The dataset used is `malicious_phish.csv`, which contains labeled URL data for training and evaluation.
+
+## Installation
+1. Clone this repository:
+   ```sh
+   git clone <repo_url>
+   cd <repo_directory>
+   ```
+2. Install required dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+## Dependencies
+Ensure you have the following Python libraries installed:
+```sh
+pandas
+flask
+sklearn
+urllib
+re
+tld
+```
+You can install them using:
+```sh
+pip install pandas flask scikit-learn tld
+```
+
+## Usage
+### Running the API
+```sh
+python app.py
+```
+
+### API Endpoints
+#### Predict URL Type
+- **Endpoint:** `/api/predict`
+- **Method:** `POST`
+- **Request Body (JSON):**
+  ```json
+  {
+    "url": "http://example.com"
+  }
+  ```
+- **Response (JSON):**
+  ```json
+  {
+    "url": "http://example.com",
+    "type": "benign",
+    "Accuracy": 0.95
+  }
+  ```
+
+## Model Training & Accuracy
+The model is trained using extracted URL-based features. It evaluates prediction accuracy and displays classification performance using `classification_report` and `accuracy_score`.
+
+## License
+This project is licensed under the MIT License.
+
+## Author
+Mohammed Saad Fazal
